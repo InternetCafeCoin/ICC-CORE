@@ -1,0 +1,26 @@
+# /etc/conf.d/iccd: config file for /etc/init.d/iccd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/icc/icc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/iccd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/iccd.pid"
+
+# Where to write iccd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/iccd"
+
+# User and group to own iccd process
+#BITCOIND_USER="icc"
+#BITCOIND_GROUP="icc"
+
+# Path to iccd executable
+#BITCOIND_BIN="/usr/bin/iccd"
+
+# Nice value to run iccd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ICC
+Comment=ICC P2P Cryptocurrency
+Comment[fr]=ICC, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ICC, eşten eşe kriptografik sanal para birimi
+Exec=icc-qt %u
+Terminal=false
+Type=Application
+Icon=icc128
+MimeType=x-scheme-handler/icc;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+[Unit]
+Description=ICC's distributed currency daemon
+After=network.target
+
+[Service]
+User=icc
+Group=icc
+
+Type=forking
+PIDFile=/var/lib/iccd/iccd.pid
+
+ExecStart=/usr/bin/iccd -daemon -pid=/var/lib/iccd/iccd.pid \
+          -conf=/etc/icc/icc.conf -datadir=/var/lib/iccd
+
+ExecStop=-/usr/bin/icc-cli -conf=/etc/icc/icc.conf \
+         -datadir=/var/lib/iccd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
